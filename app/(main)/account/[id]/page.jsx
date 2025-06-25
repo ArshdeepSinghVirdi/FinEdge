@@ -4,6 +4,7 @@ import { BarLoader } from "react-spinners";
 import { TransactionTable } from "../_components/transaction-table";
 import { notFound } from "next/navigation";
 import { AccountChart } from "../_components/account-chart";
+import ChatbotEntry from "@/components/ui/chatbot-entry";
 
 export default async function AccountPage(props) {
   const params = await props.params; 
@@ -50,6 +51,7 @@ export default async function AccountPage(props) {
       >
         <TransactionTable transactions={transactions} />
       </Suspense>
+      <ChatbotEntry />
     </div>
   );
 }

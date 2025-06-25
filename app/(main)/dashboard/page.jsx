@@ -8,6 +8,7 @@ import { BudgetProgress } from "./_components/budget-progress";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plus } from "lucide-react";
 import { DashboardOverview } from "./_components/transaction-overview";
+import ChatbotEntry from "@/components/ui/chatbot-entry";
 
 export default async function DashboardPage() {
   const [accounts, transactions] = await Promise.all([
@@ -52,6 +53,7 @@ export default async function DashboardPage() {
             <AccountCard key={account.id} account={account} />
           ))}
       </div>
+      <ChatbotEntry />
     </div>
   );
 }

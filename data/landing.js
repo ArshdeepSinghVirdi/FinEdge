@@ -5,6 +5,11 @@ import {
   CreditCard,
   Globe,
   Zap,
+  LineChart,
+  Bot,
+  Mic,
+  ShieldAlert,
+  AlertTriangle,
 } from "lucide-react";
 
 // Stats Data
@@ -29,6 +34,12 @@ export const statsData = [
 
 // Features Data
 export const featuresData = [
+  {
+    icon: <LineChart className="h-8 w-8 text-blue-600" />,
+    title: "Spending Forecasting",
+    description:
+      "Predict next month's expenses by category using AI models, and get personalized money-saving tips.",
+  },
   {
     icon: <BarChart3 className="h-8 w-8 text-blue-600" />,
     title: "Advanced Analytics",
@@ -60,6 +71,18 @@ export const featuresData = [
     icon: <Zap className="h-8 w-8 text-blue-600" />,
     title: "Automated Insights",
     description: "Get automated financial insights and recommendations",
+  },
+  {
+    icon: <Bot className="h-8 w-8 text-blue-600 animate-bounce" />,
+    title: "Voice Assistant & Chatbot",
+    description:
+      "Ask questions like 'What's my biggest expense this week?' or 'Can I afford a ₹15,000 purchase?' using voice or chat, and get instant AI-powered answers.",
+  },
+  {
+    icon: <ShieldAlert className="h-8 w-8 text-blue-600 animate-pulse" />,
+    title: "Fraud Detection Alerts",
+    description:
+      "AI-powered anomaly detection flags suspicious or unusually high transactions in real time, keeping your finances safe.",
   },
 ];
 

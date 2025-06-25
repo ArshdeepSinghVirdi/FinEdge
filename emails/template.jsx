@@ -153,6 +153,45 @@ export default function EmailTemplate({
       </Html>
     );
   }
+
+  if (type === "fraud-alert") {
+    return (
+      <Html>
+        <Head />
+        <Preview>⚠️ Suspicious Transaction Alert</Preview>
+        <Body style={{ ...styles.body, backgroundColor: "#fff1f2" }}>
+          <Container style={{ ...styles.container, border: "2px solid #f87171", backgroundColor: "#fff1f2" }}>
+            <Heading style={{ ...styles.title, color: "#b91c1c" }}>Suspicious Transaction Alert</Heading>
+            <Text style={{ ...styles.text, color: "#b91c1c", fontWeight: 600 }}>
+              Hello {userName},
+            </Text>
+            <Text style={{ ...styles.text, color: "#b91c1c" }}>
+              We detected a transaction that looks <b>unusual</b> compared to your past spending patterns:
+            </Text>
+            <Section style={{ ...styles.section, backgroundColor: "#fee2e2", border: "1px solid #fca5a5" }}>
+              <div style={{ marginBottom: 12 }}>
+                <Text style={{ ...styles.text, color: "#b91c1c" }}><b>Amount:</b> ₹{data.amount}</Text>
+                <Text style={{ ...styles.text, color: "#b91c1c" }}><b>Date:</b> {data.date}</Text>
+                <Text style={{ ...styles.text, color: "#b91c1c" }}><b>Merchant:</b> {data.merchant || "Unknown"}</Text>
+                <Text style={{ ...styles.text, color: "#b91c1c" }}><b>Category:</b> {data.category}</Text>
+                <Text style={{ ...styles.text, color: "#b91c1c" }}><b>Confidence Unusual:</b> {data.confidence}%</Text>
+                {data.reason && (
+                  <Text style={{ ...styles.text, color: "#b91c1c" }}><b>Reason:</b> {data.reason}</Text>
+                )}
+              </div>
+              <Text style={{ ...styles.text, color: "#b91c1c" }}>
+                If this was <b>not you</b>, please review your account immediately.
+              </Text>
+            </Section>
+            <Text style={{ ...styles.footer, color: "#b91c1c" }}>
+              Your security is our top priority.<br />
+              - The FinEdge Team
+            </Text>
+          </Container>
+        </Body>
+      </Html>
+    );
+  }
 }
 
 const styles = {
