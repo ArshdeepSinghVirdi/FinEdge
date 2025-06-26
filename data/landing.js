@@ -76,7 +76,7 @@ export const featuresData = [
     icon: <Bot className="h-8 w-8 text-blue-600 animate-bounce" />,
     title: "Voice Assistant & Chatbot",
     description:
-      "Ask questions like &apos;What&#39;s my biggest expense this week?&apos; or &apos;Can I afford a ₹15,000 purchase?&apos; using voice or chat, and get instant AI-powered answers.",
+      "Ask questions using voice or chat, and get instant AI powered insights tailored to your finances.",
   },
   {
     icon: <ShieldAlert className="h-8 w-8 text-blue-600 animate-pulse" />,
