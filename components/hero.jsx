@@ -27,9 +27,13 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="pt-40 pb-20 px-4">
-      <div className="container mx-auto text-center">
-        <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 gradient-title">
+    <section className="pt-40 pb-20 px-4 relative overflow-hidden">
+      {/* Animated Gradient Circles */}
+      <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-gradient-to-br from-blue-400 to-purple-300 opacity-30 rounded-full blur-3xl animate-float-slow z-0" />
+      <div className="absolute top-[20%] right-[-100px] w-80 h-80 bg-gradient-to-br from-pink-300 to-blue-300 opacity-20 rounded-full blur-3xl animate-float-slower z-0" />
+      <div className="absolute bottom-[-100px] left-[10%] w-64 h-64 bg-gradient-to-br from-green-300 to-blue-200 opacity-20 rounded-full blur-3xl animate-float-slowest z-0" />
+      <div className="container mx-auto text-center relative z-10">
+        <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 gradient-title animate-hero-text">
           Manage Your Finances <br /> with Intelligence
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">

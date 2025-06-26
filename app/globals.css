@@ -116,3 +116,33 @@ html {
   background-size: 200% 200%;
   animation: gradientMove 3s ease infinite;
 }
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+@keyframes floatSlower {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(40px) scale(1.08); }
+}
+@keyframes floatSlowest {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.03); }
+}
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+.animate-float-slower {
+  animation: floatSlower 12s ease-in-out infinite;
+}
+.animate-float-slowest {
+  animation: floatSlowest 16s ease-in-out infinite;
+}
+@keyframes heroText {
+  0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+  60% { opacity: 1; transform: translateY(-10px) scale(1.03); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-hero-text {
+  animation: heroText 1.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
