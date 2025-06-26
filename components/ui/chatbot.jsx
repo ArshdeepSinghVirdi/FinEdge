@@ -107,7 +107,7 @@ export default function ChatbotButton({ context = "general" }) {
               {context === "transaction"
                 ? "Ask about your latest or biggest transactions!"
                 : context === "forecast"
-                ? "Curious about next month's spending? Just ask!"
+                ? "Curious about next month&#39;s spending? Just ask!"
                 : "Ask me anything about your finances!"}
             </span>
             <span className="block mt-1 text-blue-400 text-sm font-normal">

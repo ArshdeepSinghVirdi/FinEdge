@@ -87,7 +87,7 @@ const ForecastPage = () => {
           <h1 className="text-3xl font-bold">Spending Forecasting</h1>
         </div>
         <p className="mb-8 text-gray-600 max-w-2xl">
-          Predict your next month's expenses by category using advanced AI models. Visualize your future spending and get personalized tips to save money.
+          Predict your next month&#39;s expenses by category using advanced AI models. Visualize your future spending and get personalized tips to save money.
         </p>
         <Card className="mb-8">
           <CardContent className="py-8 flex flex-col items-center justify-center">
