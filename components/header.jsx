@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { checkUser } from "@/lib/checkUser";
 import Image from "next/image";
+import { HeaderAuthAction } from "./header-auth-action";
 
 const Header = async () => {
   await checkUser();
@@ -66,9 +67,7 @@ const Header = async () => {
             </a>
           </SignedIn>
           <SignedOut>
-            <SignInButton forceRedirectUrl="/dashboard">
-              <Button variant="outline">Login</Button>
-            </SignInButton>
+            <HeaderAuthAction />
           </SignedOut>
           <SignedIn>
             <UserButton
