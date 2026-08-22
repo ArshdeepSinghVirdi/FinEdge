@@ -21,7 +21,7 @@ export async function getUserAccounts() {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
-  const user = await db.user.findUnique({
+  let user = await db.user.findUnique({
     where: { clerkUserId: userId },
   });
 

@@ -34,7 +34,7 @@ export default async function DashboardPage() {
 
       {/* Dashboard Overview */}
       <DashboardOverview
-        accounts={accounts}
+        accounts={accounts || []}
         transactions={transactions || []}
       />
 
@@ -48,7 +48,7 @@ export default async function DashboardPage() {
             </CardContent>
           </Card>
         </CreateAccountDrawer>
-        {accounts.length > 0 &&
+        {(accounts || []).length > 0 &&
           accounts?.map((account) => (
             <AccountCard key={account.id} account={account} />
           ))}
